@@ -25,4 +25,8 @@ Tasks
 - [ ] by week two I should have the basics down for the study mode and will begin to work in more detail, shortly after
 
 
+Examples that will be used
 
+https://www.shallowsky.com/software/scripts/flashcard/
+
+https://stackoverflow.com/questions/44852213/creating-a-flashcard-vocabulary-program
