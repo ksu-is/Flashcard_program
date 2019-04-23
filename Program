@@ -4,6 +4,11 @@ import random
 try: input = raw_input
 except: pass
 
+#simple code that allows user to add their name before answering 
+name = input("Please enter your name before beginning: ")
+print("Welcome",name)
+print()
+
 # a simple sample dictionary 'pick the right color'
 # keyword:[def1, def2, def3, correct_def_ix]
 # could use module pickle to dump/load this dictionary
@@ -41,3 +46,10 @@ C) {}
 # final
 sf = "Answers given --> {} correct and {} wrong"
 print(sf.format(correct, wrong))
+
+option for study mode right after the quiz
+study_option = input("Based on your quiz scores, would you like to begin a study mode (y or n): ")
+if study_option == "y":
+    print(keyword_list)
+else:
+    print("Goodbye", name)
