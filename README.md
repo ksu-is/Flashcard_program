@@ -3,7 +3,8 @@ Python terminal program containing flashcards for data structures &amp; algorith
 This program will allow users to be able to study for their tests effectively.  
 This already has a quiz component to it; however, I would like to be able to add a study aspect as well by adding onto the code
 
-update: checked over code and discovered that I did not like it and scrapped the old code.  I then looked online and found other code to use instead
+
+update: checked over code and discovered that I did not like it and scrapped the old code.  I then looked online and found other code to use instead. Updated code used from this website: https://www.daniweb.com/programming/software-development/code/467095/creating-a-flashcard-like-quiz-game-python
 Prelimary tasks
 
 -[X ] check code for any bugs and make sure it runs properly
