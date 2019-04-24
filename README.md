@@ -13,12 +13,22 @@ Prelimary tasks
 
 update -[X ] did not like code that was in here and found something better online outside of github
 
--[ ] find out best way to add study mode 
+-[X ] find out best way to add study mode 
 
 Actual tasks
 
--[ ] use online code to help build study mode
+-[X ] use online code to help build study mode
 
--[ ] periodically test code to make sure that the project doesnt break
+-[X ] periodically test code to make sure that the project doesnt break
 
--[ ] have beginning code for the study mode by end of the week
+-[X ] have beginning code for the study mode by end of the week
+
+-[X ] let user add his name into the code
+
+-[ ] add in an option to either use quiz or study mode
+
+-[ ] check code to make sure it works
+
+-[ ] add true or false quiz as well
+
+
