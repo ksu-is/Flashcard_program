@@ -47,9 +47,47 @@ C) {}
 sf = "Answers given --> {} correct and {} wrong"
 print(sf.format(correct, wrong))
 
-option for study mode right after the quiz
+
+# Added Study Option
 study_option = input("Based on your quiz scores, would you like to begin a study mode (y or n): ")
+#these are the study lists and the answers 
+study_list = ["sun", "coal", "grass", "water"]
+answer = [ "yellow", "black", "green", "blue"]
+#this pairs the question with cooresponding answer
+study1 = (study_list[0], answer[0])
+study2 = (study_list[1], answer[1])
+study3 =(study_list[2], answer[2])
+study4 =(study_list[3], answer[3])
+
+#this code allows the user to 
 if study_option == "y":
-    print(keyword_list)
-else:
+    while True:  
+       
+        option = input("Which would you like to study first( sun, coal, grass, water, or n to stop the program): ")
+        
+   
+        if option.lower() =='sun':
+            print(study1)
+            
+        elif option.lower() == 'coal':
+            print(study2)
+            
+        elif option.lower() == 'grass':
+            print(study3)
+           
+        elif option.lower() == 'water':
+            print(study4)
+        if option.lower() == 'n':
+            print("Thank you", name, "Goodbye")
+            break
+           
+            
+        else:
+            print()
+
+elif study_option == 'n':
     print("Goodbye", name)
+    
+else:
+    print("not valid ")
+    
