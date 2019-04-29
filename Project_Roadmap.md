@@ -32,10 +32,12 @@
 
 -[ X] check for best way to import code for study mode and quiz
 
--[  ] add in true or false component to the code
+-[ X ] add in true or false component to the code
 
--[  ] add in skelaton for the true or false quiz
+-[ X ] add in skelaton for the true or false quiz
 
--[  ] add rest of code and test it
+-[ X ] add rest of code and test it
+
+-[ ] add in way to access other programs without restarting it
 
 
