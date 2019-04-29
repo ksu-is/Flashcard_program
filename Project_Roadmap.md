@@ -20,7 +20,9 @@
 
 -[ X ] begin to add in study mode for the program
 
--[  ] check the code periodically to make sure it works
+-[ X] check the code periodically to make sure it works
+
+-[X ] finish adding in study mode 
 
 -[ ] add in an option to either do study mode or test mode
 
