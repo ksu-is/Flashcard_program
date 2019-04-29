@@ -90,6 +90,40 @@ elif beginning.lower() == "study":
         else:
             print()
 elif beginning.upper() == "T":
+
+    import random
+    mydict = {
+        'Is the sun yellow' : ['True', 'False',0],
+        'Is water orange':['True','False', 1],
+        'Is grass red':['True','False', 1],
+        'Is coal black' :['True','False', 0]
+        }
+    keyword_list = list(mydict.keys())
+    # shuffle the keywords in place
+    random.shuffle(keyword_list)
+    correct = 0
+    wrong = 0
+    for keyword in keyword_list:
+        sf = '''\
+        {}
+        A) {}
+        B) {}
+        '''
+        print(sf.format(keyword, mydict[keyword][0],
+                        mydict[keyword][1],mydict[keyword][2]))
+        letter = input("Pick the correct option (True or False): ").upper()
+        if letter == 'ABC'[mydict[keyword][2]]:
+            print('correct')
+            correct += 1
+        else:
+            print('wrong')
+            wrong += 1
+            print('-'*30)
+        
+    # final
+    sf = "You answered {} correct and {} wrong"
+    print(sf.format(correct, wrong))
+    print("Please restart the program to access another mode!")
      
     
 else:
