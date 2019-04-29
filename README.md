@@ -1,4 +1,4 @@
-# Amazing Flashcard Program
+# KnowItAll Flashcards
 Python terminal program containing flashcards for data structures &amp; algorithms.  
 This program will allow users to be able to study for their tests effectively.  
 This already has a quiz component to it; however, I would like to be able to add a study aspect as well by adding onto the code
@@ -29,6 +29,9 @@ Actual tasks
 
 -[ ] check code to make sure it works
 
--[ ] add true or false quiz as well
+-[ ] add true or false quiz as well 
+
+-[ ] add option for either study, T/F, and quiz mode
+
 
 
