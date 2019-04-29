@@ -33,7 +33,9 @@ Actual tasks
 
 -[X ] add option for either study, T/F, and quiz mode
 
--[ ] add in way to have program go back to beginning after one program is used
+-[X ] add in way to have program go back to beginning after one program is used
+
+-[ ] want to import the question list to program
 
 
 
