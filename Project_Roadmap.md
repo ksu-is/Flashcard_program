@@ -38,6 +38,8 @@
 
 -[ X ] add rest of code and test it
 
--[ ] add in way to access other programs without restarting it
+-[X ] add in way to access other programs without restarting it
+
+-[ ] add in dictionary for questions
 
 
