@@ -25,13 +25,15 @@ Actual tasks
 
 -[X ] let user add his name into the code
 
--[ ] add in an option to either use quiz or study mode
+-[X ] add in an option to either use quiz or study mode
 
--[ ] check code to make sure it works
+-[X ] check code to make sure it works
 
--[ ] add true or false quiz as well 
+-[ X] add true or false quiz as well 
 
--[ ] add option for either study, T/F, and quiz mode
+-[X ] add option for either study, T/F, and quiz mode
+
+-[ ] add in way to have program go back to beginning after one program is used
 
 
 
