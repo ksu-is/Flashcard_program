@@ -15,13 +15,13 @@ while True:
         except: pass
 
         # a simple sample dictionary 'pick the right color'
-        # keyword:[def1, def2, def3, correct_def_ix]
+        # keyword:[def1, def2, def3,def4, correct_def_ix]
         # could use module pickle to dump/load this dictionary
         mydict = {
         'sun' : ['black', 'yellow', 'blue','green', 1],
         'water' : ['red', 'white', 'blue','green', 2],
         'grass' : ['white', 'green', 'orange','red', 1],
-        'coal' : ['black', 'purple', 'red', 'green' 0]
+        'coal' : ['black', 'purple', 'red','green', 0]
         }
 
      
@@ -29,20 +29,20 @@ while True:
         keyword_list = list(mydict.keys())
         # shuffle the keywords in place
         random.shuffle(keyword_list)
-        print('Pick the right color:')
         correct = 0
         wrong = 0
         for keyword in keyword_list:
             sf = '''\
-        {}
-        A) {}
-        B) {}
-        C) {}
-        '''
+         {}
+         A) {}
+         B) {}
+         C) {}
+         D) {}
+         '''
             print(sf.format(keyword, mydict[keyword][0],
-                            mydict[keyword][1],mydict[keyword][2], mydict[keyword][3]))
-            letter = input("Enter letter of your choice (A B C D): ").upper()
-            if letter == 'ABC'[mydict[keyword][3]]:
+                            mydict[keyword][1],mydict[keyword][2],mydict[keyword][3]))
+            letter = input("Enter the correct answer (A B C D): ").upper()
+            if letter == 'ABC'[mydict[keyword][4]]:
                 print('correct')
                 correct += 1
             else:
@@ -53,28 +53,20 @@ while True:
         # final
         sf = "You answered {} correct and {} wrong"
         print(sf.format(correct, wrong))
-       
-
-    elif beginning.lower() == "study":
-    
-        #this is the study list, users can add on by adding words on the end of study list and answer
-        #follow previous examples
-        study_list = ["sun", "coal", "grass", "water"]
         
+
+    elif beginning.lower() == "old":
+    
+        #these are the study lists and the answers 
+        study_list = ["sun", "coal", "grass", "water"]
         #both study and answer are associated by cooresponding number
         answer = [ "yellow", "black", "green", "blue"]
-       
-       #this pairs the question with cooresponding answer
-       #after new words are added above, add in new variable with cooresponding study_list and answer numbers
-       #example would be study5 =(study_list[4],answer[4]) after just one word is added
+        #this pairs the question with cooresponding answer
         study1 = (study_list[0], answer[0])
         study2 = (study_list[1], answer[1])
         study3 =(study_list[2], answer[2])
         study4 =(study_list[3], answer[3])
     
-    #users are able to run through 4 different options till they press n as long as they want
-    #after above is done, users will need to add in extra options
-    #follow the examples below, set option.lower() to new added keyword, then print the above paired values that are set to each other
         while True:  
        
             option = input("Which would you like to study first( sun, coal, grass, water, or n to stop the program): ")
@@ -95,40 +87,37 @@ while True:
                 print("Thank you", name, "Goodbye")
                 break
            
-          #if user accidently presses accidently presses a different button, it will send them to option
+            
             else:
-               print()
-   
-   elif beginning.upper() == "T":
+                print()
+
+    elif beginning.lower() == "true":
 
         import random
-        
-        #updated dictionary for true or false. 
-        #Adding in new options is as simple as following the examples below
         mydict = {
             'Is the sun yellow' : ['True', 'False',0],
             'Is water orange':['True','False', 1],
             'Is grass red':['True','False', 1],
-            'Is coal black' :['True','False', 0]
+            'Is coal black' :['True','False', 0],
                    }
         keyword_list = list(mydict.keys())
         # shuffle the keywords in place
         random.shuffle(keyword_list)
         correct = 0
         wrong = 0
-        
-       #this sets up the design for how the question will turn out
+        #how the question will show up in code
         for keyword in keyword_list:
             sf = '''\
             {}
             A) {}
             B) {}
             '''
-            #how the question is formatted
+            print()
+            #formats the question plus answers
             print(sf.format(keyword, mydict[keyword][0],
                             mydict[keyword][1],mydict[keyword][2]))
+            #only 2 options for input
             letter = input("Pick the correct option (True or False): ").upper()
-            #only 2 options this time
             if letter == 'ABC'[mydict[keyword][2]]:
                 print('correct')
                 correct += 1
@@ -137,18 +126,19 @@ while True:
                 wrong += 1
                 print('-'*30)
         
-        # final
+        
         sf = "You answered {} correct and {} wrong"
         print(sf.format(correct, wrong))
         
-     # kills the entire program
-     elif beginning.lower() == "n":
+    #kills the program
+    elif beginning.lower() == "n":
         print("Goodbye", name)
-        break 
-     
-     elif beginning.lower() =="new":
+        break
+        
+    elif beginning.lower() =="new":
         import random
         # make string input work with Python2 or Python3
+
         #new study mode dictionary
         mydict = {
         ' the sun is yellow',
@@ -156,24 +146,29 @@ while True:
         'the grass is green',
         'the coal is black',
          }
-            
+        
+
+     
+
         keyword_list = list(mydict)
+        # shuffle the keywords in place
         random.shuffle(keyword_list)
-        #brackets is where statement above shows up
+        #the brackers are where the statement shows up
         for keyword in keyword_list:
             sf = '''\
          {}
                   '''
+        #loops program until user presses n    
         print(sf.format(keyword))    
-        #program is set on loop until user cancels it
+        
         while True:
             letter = input("Press enter to go to next word or n to end the program ").lower()
-            
+            #kills the program
             if letter.lower() == "n":
                 print("Goodbye" )
                 break
-            # program is copied so that it keeps it random and only posts 1 definition at a time
-            #this is opposed to it printing all of them
+           #reprinted program to make sure it only printed one option randomly                 
+            
             else:
                 mydict = {
                     ' the sun is yellow',
@@ -189,9 +184,12 @@ while True:
                     sf = '''\
                  {}
                           '''
-                 print(sf.format(keyword))  
+            
+                print(sf.format(keyword))  
+    
     
     else:
         print("Please enter designated options")
+    
 
-
+         
