@@ -110,11 +110,7 @@ while True:
             'Is water orange':['True','False', 1],
             'Is grass red':['True','False', 1],
             'Is coal black' :['True','False', 0]
-            'Is coal blue' : ['True','False',1],
-            'Is the sun black':['True','False',1],
-            'Is the water blue':['True','False',0],
-            'Is the grass green':['True','False',0],
-            }
+                   }
         keyword_list = list(mydict.keys())
         # shuffle the keywords in place
         random.shuffle(keyword_list)
@@ -128,9 +124,11 @@ while True:
             A) {}
             B) {}
             '''
+            #how the question is formatted
             print(sf.format(keyword, mydict[keyword][0],
                             mydict[keyword][1],mydict[keyword][2]))
             letter = input("Pick the correct option (True or False): ").upper()
+            #only 2 options this time
             if letter == 'ABC'[mydict[keyword][2]]:
                 print('correct')
                 correct += 1
@@ -151,7 +149,7 @@ while True:
      elif beginning.lower() =="new":
         import random
         # make string input work with Python2 or Python3
-
+        #new study mode dictionary
         mydict = {
         ' the sun is yellow',
         'the water is blue',
@@ -160,21 +158,22 @@ while True:
          }
             
         keyword_list = list(mydict)
-        # shuffle the keywords in place
         random.shuffle(keyword_list)
+        #brackets is where statement above shows up
         for keyword in keyword_list:
             sf = '''\
          {}
                   '''
         print(sf.format(keyword))    
-        
+        #program is set on loop until user cancels it
         while True:
             letter = input("Press enter to go to next word or n to end the program ").lower()
             
             if letter.lower() == "n":
                 print("Goodbye" )
                 break
-                            
+            # program is copied so that it keeps it random and only posts 1 definition at a time
+            #this is opposed to it printing all of them
             else:
                 mydict = {
                     ' the sun is yellow',
@@ -190,8 +189,7 @@ while True:
                     sf = '''\
                  {}
                           '''
-            
-                print(sf.format(keyword))  
+                 print(sf.format(keyword))  
     
     else:
         print("Please enter designated options")
