@@ -3,7 +3,8 @@ name = input("Please enter your name before beginning: ")
 print("Welcome",name)
 print()
 while True:
-    beginning = input("Would you like to use study mode or quiz mode! (type either study, quiz, T, or n) ")
+    print("Enter the key words to use either study mode, quiz mode, T/F quiz, or leave!")
+    beginning = input("(type either new ,old, quiz, true, or n) ")
 
     if beginning.lower() == "quiz":
 
@@ -146,6 +147,51 @@ while True:
      elif beginning.lower() == "n":
         print("Goodbye", name)
         break 
+     
+     elif beginning.lower() =="new":
+        import random
+        # make string input work with Python2 or Python3
+
+        mydict = {
+        ' the sun is yellow',
+        'the water is blue',
+        'the grass is green',
+        'the coal is black',
+         }
+            
+        keyword_list = list(mydict)
+        # shuffle the keywords in place
+        random.shuffle(keyword_list)
+        for keyword in keyword_list:
+            sf = '''\
+         {}
+                  '''
+        print(sf.format(keyword))    
+        
+        while True:
+            letter = input("Press enter to go to next word or n to end the program ").lower()
+            
+            if letter.lower() == "n":
+                print("Goodbye" )
+                break
+                            
+            else:
+                mydict = {
+                    ' the sun is yellow',
+                     'the water is blue',
+                     'the grass is green',
+                      'the coal is black',
+                         }
+                
+                keyword_list = list(mydict)
+                # shuffle the keywords in place
+                random.shuffle(keyword_list)
+                for keyword in keyword_list:
+                    sf = '''\
+                 {}
+                          '''
+            
+                print(sf.format(keyword))  
     
     else:
         print("Please enter designated options")
